@@ -1,0 +1,48 @@
+<!-- views/posts/index.ejs -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <% include ../partials/head %>
+ </head>
+ <body class="body" onload ="main_ajax_nowload()">
+  <% include ../partials/nav %>
+
+   <div class="row container mx-auto mid_fix_body">
+
+     <div class="col-sm-12 sb_parent">
+       <div class="showBody">
+        <a href="/toon/<%= lists.listname %>">
+          <h4><%= lists.listname %></h4>
+        </a>
+        <h5><%= lists.name %></h5>
+        <hr>
+
+        <% if( lists.index > 0 ){ %>
+          <a href="/toon/<%= lists.listname %>/<%= lists.index - 1 %>">이전</a>
+        <% } %>
+        <% if( lists.index < index_length-1 ){ %>
+          <a href="/toon/<%= lists.listname %>/<%= lists.index + 1 %>">다음</a>
+        <%  } %>
+
+        <center>
+         <% lists.content.forEach(function(list) { %>
+           <img class="manhwalist_show_img" src="<%=list %>" alt="">
+         <% }) %>
+        </center>
+
+        <% if( lists.index > 0 ){ %>
+          <a href="/toon/<%= lists.listname %>/<%= lists.index - 1 %>">이전</a>
+        <% } %>
+        <% if( lists.index < index_length-1 ){ %>
+        <a href="/toon/<%= lists.listname %>/<%= lists.index + 1 %>">다음</a>
+        <%  } %>
+
+       </div>
+     </div>
+   </div>
+   <footer>
+     <% include ../partials/footer %>
+   </footer>
+ </body>
+</html>

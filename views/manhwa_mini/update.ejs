@@ -1,0 +1,43 @@
+<!-- views/posts/index.ejs -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <% include ../partials/head %>
+ </head>
+ <body class="body" onload ="main_ajax_nowload()">
+  <% include ../partials/nav %>
+  <div class="user_body">
+    <div class="upmain_body container mx-auto row">
+    <div class="row container upmangabody">
+      <div class="col-sm-12 newupdate">
+        <sup><span class="badge-pill badge-danger">new</span></sup><suv class="suv">최근 업데이트( 최근50개만 표시됩니다. )</suv>
+      </div>
+      <% if(uplists.length == 0){ %>
+        <h5>최근 1주간 업데이트된 만화가 없습니다.</h5>
+      <% } else { %>
+           <% uplists.forEach(function(list) { %>
+              <div class="col-sm-2 upmanlayout">
+                <div class="manhwalist_each">
+                  <a class="manhwalist_name" href="/toon/<%=list.listname %>/<%= list.index %>">
+                      <img src="<%=list.content[0] %>" alt="" class="manhwalist_logo">
+                      | <%=list.m_updDated %> |
+                      <%=list.name %>
+                  </a>
+                </div>
+              </div>
+          <% }) %>
+      <%  } %>
+    </div>
+  </div>
+
+<!--  -->
+
+
+
+</div>
+   <footer>
+     <% include ../partials/footer %>
+   </footer>
+ </body>
+</html>

@@ -1,0 +1,15 @@
+  <div class="footer" >
+    <% if(isAuthenticated){ %>
+    <div class="counter">
+      <% if(vistorCounter){ %>
+        <span class="badge badge-danger badge-pill footer_badge">
+          총 방문자 : <%= vistorCounter.totalCount %><br>
+          ( 오늘 : <%= vistorCounter.todayCount %> )
+        </span>
+        <% } %>
+      </div>
+      <% } %>
+    <br>
+    <!-- ajax -->
+    <script type="text/javascript" src="/js/manga_ajax.js"></script>
+  </div>

@@ -1,0 +1,147 @@
+<!-- nav  -->
+<!-- views/partials/nav.ejs -->
+<!-- <div id="brick" class=""></div> -->
+<!-- <div id="brick" class=""></div> -->
+<nav id="nav" class="navbar navbar-expand navbar-dark" >
+ <div class="container">
+  <a href="/"><div class="navbar-brand">MaiMai</div></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="myNavbar">
+   <ul class="navbar-nav mr-auto myNavbar">
+     <div class="mangasearch float_right">
+         <div class="form-inline" action="" id="search">
+           <% var select %>
+           <input id="mangasearchform" class="searchform cvMinLength form-control mr-sm-2  search_select" placeholder="만화 제목 검색"
+           type="search" name="searchText" value="<%= select?search.searchText:"" %>">
+           <button class="btn btn-primary btn-sm my-2 my-sm-0" id="search_button" onclick="fnMove()" type="">검색</button>
+         </div>
+       <div class="message" id="searchError"></div>
+     </div>
+    <% if(isAuthenticated){ %>
+    <!-- <li class="nav-item dropdown dropdown_Post_nav">
+      <a class="nav-link dropdown-toggle" href="/posts" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        게시판
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/posts?group=">전체글보기</a>
+        <a class="dropdown-item" href="/posts?group=1">공지사항</a>
+        <a class="dropdown-item" href="/posts?group=2">커뮤니티</a>
+        <a class="dropdown-item" href="/posts?group=3">질문과 답변</a>
+      </div>
+    </li> -->
+  <% } %>
+   </ul>
+   <ul class="navbar-nav navbar-right myNavbar2">
+      <% if(isAuthenticated){ %>
+    <li class="nav-item navbar_login"><a class="nav-link" href="/users">회원목록</a></li>
+    <li class="nav-item navbar_login"><a class="nav-link" href="/users/<%= currentUser.username %>">내 정보</a></li>
+    <li class="nav-item navbar_login"><a class="nav-link" href="/logout">로그아웃</a></li>
+    <li class="nav-item navbar_login"><a class="nav-link" href="/users/new">회원가입</a></li>
+      <% } else { %>
+    <li class="nav-item navbar_login"><a class="nav-link" href="/login">로그인</a></li>
+      <% } %>
+   </ul>
+  </div>
+      <!-- adval -->
+
+      <!--  광고 -->
+      <!-- <script type="text/javascript">
+          var wid = '425225';
+          var uid = '200426';
+      </script>
+      <script type="text/javascript" src="//cdn.popcash.net/pop.js"></script> -->
+    </div>
+</nav>
+
+<div class="categorynav">
+  <ul class="nav container row mx-auto category_Container">
+    <li class="nav-item col-3">
+      <a class="nav-link nav-item_category" href="/toon/update">업데이트</a>
+    </li>
+    <li class="nav-item col-3">
+      <a class="nav-link nav-item_category" href="/toon/keepmanga">연재만화</a>
+    </li>
+    <li class="nav-item col-3">
+      <a class="nav-link nav-item_category" href="/toon/finish_manga">완결만화</a>
+    </li>
+    <li class="nav-item dropdown dropdown_Post_nav col-3" style="padding-right: 0px;">
+      <a class="nav-link nav-item_category dropdown-toggle" href="/posts" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        게시판
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/posts?group=">전체글보기</a>
+        <a class="dropdown-item" href="/posts?group=1">공지사항</a>
+        <a class="dropdown-item" href="/posts?group=2">커뮤니티</a>
+        <a class="dropdown-item" href="/posts?group=3">질문과 답변</a>
+        <% if(isAuthenticated){ %>
+        <a class="dropdown-item" href="/users">회원목록</a>
+        <a class="dropdown-item" href="/users/<%= currentUser.username %>">내 정보</a>
+        <a class="dropdown-item" href="/logout">로그아웃</a>
+        <a class="dropdown-item" href="/users/new">회원가입</a>
+          <% } else { %>
+        <a class="dropdown-item" href="/login">로그인</a>
+        <% } %>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="">
+  <div id="search_box" class="container mx-auto row">
+      <!-- ajax -->
+  </div>
+</div>
+
+<div class="container best_title">
+  인기만화 Best.
+</div>
+<div class="container bestdiv">
+  <table class="best_table">
+  <tr>
+  <td><a href="/toon/원펀맨 리메이크"><img src="/img/onepunchman.png">원펀맨<br><span style="color:#999;">(리메이크)</span></a></td>
+  <td><a href="/toon/원피스"><img src="/img/lupy.png">원피스</a></td>
+  <td><a href="/toon/헌터X헌터"><img src="/img/gon.jpg">헌터x헌터</a></td>
+  <td><a href="/toon/진격의 거인"><img src="/img/giant.jpg">진격의 거인</a></td>
+  <td><a href="/toon/블랙 클로버"><img src="/img/black.png">블랙 클로버</a></td>
+  <td><a href="/toon/나의 히어로 아카데미아"><img src="/img/myhero.png">나의 히어로 아카데미아</a></td>
+  <td><a href="/toon/일곱개의 대죄"><img src="/img/seven.jpg">일곱개의 대죄</a></td>
+  <td><a href="/toon/도쿄구울"><img src="/img/zombie.jpg">도쿄구울:re</a></td>
+  </tr>
+  <tr>
+    <td><a href="/toon/장난을 잘치는 타카기양"><img src="/img/takagi.jpg">장난을 잘치는 타카기양</a></td>
+  <td><a href="/toon/피안도"><img src="/img/piando.jpg">피안도48일후</a></td>
+  <td><a href="/toon/아인"><img src="/img/ain.png">아인</a></td>
+  <td><a href="/toon/킹덤"><img src="/img/kingdom.png">킹덤</a></td>
+  <td><a href="/toon/약속의 네버랜드"><img src="/img/promise.png">약속의 네버랜드</a></td>
+  <td><a href="/toon/나는 마리 안에"><img src="/img/mari.png">나는마리안에</a></td>
+  <td><a href="/toon/고블린 슬레이어"><img src="/img/gobline.png">고블린 슬레이어</a></td>
+  <td><a href="/toon/신체 찾기"><img src="/img/find.png">신체찾기</a></td>
+  </tr>
+  </table>
+</div>
+
+<div class="content container mx-auto row barbody">
+    <div class="col-sm-12 barboder">
+      <div class="" id="showmenu">연재중 만화 펼치기 <span class="oi oi-chevron-top"></span></div>
+        <div class="progress_menu" style="display: none;">
+          <div class="user user-index">
+            <ul class="floats" id="floats1">
+              <!-- ajax -->
+            </ul>
+          </div>
+      </div>
+    </div>
+
+  <div class="col-sm-12 barboder">
+      <div class="" id="showmenu2">완결 만화 펼치기 <span class="oi oi-chevron-top"></span></div>
+      <div class="progress_menu2" style="display: none;">
+        <div class="user user-index">
+          <ul class="floats" id="floats2">
+            <!-- ajax -->
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<!--head임 -->
+<meta name = "referrer"content ="never"/>
+<!-- 모바일화면 -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<!-- jquery -->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- web font -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet" type="text/css">
+<!-- bootstrap -->
+<link rel="stylesheet" href="/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- 아이콘쓸려고.. -->
+<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+<!-- 썸머노트 -->
+<link rel="stylesheet" href="/SummerNote/dist/summernote.css" type="text/css" />
+<script type="text/javascript" src="/SummerNote/dist/summernote.js"></script>
+<!-- my css -->
+<link rel="stylesheet" href="/css/master.css">
+<!-- css변경js -->
+<script type="text/javascript" src="/js/nav_active.js"></script>
+<!--검색기능 최소글자 에러처리  -->
+<script type="text/javascript" src="/js/form_validation.js"></script>
+<!-- 메인페이지 드롭다운   -->
+<script type="text/javascript" src="/js/dropdown_nav.js"></script>
+<!-- 썸머노트 -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#summernote').summernote({
+      height : 500,
+      codemirror: { // codemirror options
+        theme: 'monokai'
+      }
+    });
+  });
+  var postForm = function() {
+	var content = $('textarea[name="content"]').html($('#summernote').code());
+}
+</script>
+
+<title>만화는 maimai!</title>

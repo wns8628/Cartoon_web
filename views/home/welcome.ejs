@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/head  %>
+</head>
+<body  class="body" onload ="main_ajax_nowload()">
+  <% include ../partials/nav %>
+
+<div>
+<!-- -->
+
+
+<% if(newManhwa.length > 0 ){ %>
+  <div class="upmain_body container mx-auto row">
+    <div class="row container upmangabody">
+      <div class="col-sm-12 newupdate">
+        <sup><span class="badge-pill badge-success">new!</span></sup><suv class="suv"><a href="/toon/update">신작!</a></suv>
+      </div>
+   <% newManhwa.forEach(function(newMang){ %>
+     <div class="col-sm-2 upmanlayout">
+       <div class="manhwalist_each">
+        <a class="manhwalist_name" href="/toon/<%= newMang.name %>">
+          <img src='<%= newMang.photo %>' alt="" class="manhwalist_logo">
+         <%= newMang.name %>
+        </a>
+      </div>
+    </div>
+   <% }) %>
+  </div>
+ </div>
+<% } %>
+
+  <div class="upmain_body container mx-auto row">
+    <div class="row container upmangabody">
+      <div class="col-sm-12 newupdate">
+        <sup><span class="badge-pill badge-danger">new</span></sup><suv class="suv"><a href="/toon/update">최근 업데이트(더보기)</a></suv>
+      </div>
+      <% if(uplists.length == 0){ %>
+        <h5>최근 1주간 업데이트된 만화가 없습니다.</h5>
+      <% } else { %>
+           <% uplists.forEach(function(list) { %>
+              <div class="col-sm-2 upmanlayout">
+                <div class="manhwalist_each">
+                  <a class="manhwalist_name" href="/toon/<%=list.listname %>/<%= list.index %>">
+                    <img src="<%=list.content[0] %>" alt="" class="manhwalist_logo">
+                      <%=list.m_updDated %>
+                      <%=list.name %>
+                  </a>
+                </div>
+              </div>
+          <% }) %>
+      <%  } %>
+    </div>
+  </div>
+
+  <div id="main_div" class="container row mx-auto home home-welcome row">
+    <% if(errors.login){ %>
+     <script type="text/javascript">
+       alert("권한이 없습니다.")
+     </script>
+    <% } %>
+  </div>
+<!--  -->
+
+<!--  -->
+<hr>
+    <div class="container mx-auto row mangabodymainbody">
+      <div class="welcome_post container row">
+         <!--  -->
+         <div id="main_post_title" class="col-sm-4">
+             <div class="row">
+               <h3 class="col-9">
+                 <a href="/posts" id="more_color" >공지사항</a>
+               </h3>
+               <h4 class="col-3">
+                 <a href="/posts?group=1" id="more_color">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>more
+                 </a>
+               </h4>
+             </div>
+           <table class="table table-hover table-sm posts">
+             <thead>
+             </thead>
+               <tbody>
+                 <% if(posts == null || posts.length == 0){ %>
+                   <tr>
+                     <td class="noData" colspan=100> 글이 없습니다. </td>
+                   </tr>
+                   <% } %>
+                   <% Notice.forEach(function(post) { %>
+                     <tr>
+                       <td class="title">
+                         <a  class="title" href="/posts/<%= post._id %>?<%= urlQuery %>"><div class="ellipsis"><%= post.title %>&nbsp;</div><span class="comments"></a>
+                         <a  class="comments" href="/posts/<%= post._id %>?<%= urlQuery %>">(<%= post.comment.length %>)</a></span>
+                       </td>
+                       <td class="adate">
+                           <%= post.createdDate %>
+                       </td>
+                     </tr>
+                       <% }) %>
+                 </tbody>
+              </table>
+            </div>
+         <!--  -->
+       </div>
+
+      <div class="row container mangabody">
+        <button type="button"name="" class="col-6 ongoingmanga1" id="manga_ing_finish1" disabled >연재만화 √</button>
+        <button type="button"name="" class="col-6 ongoingmanga2" id="manga_ing_finish2" >완결만화(클릭!)</button>
+       <div class="row container mangabody" id="manga_finish_ing">
+         <!-- ajax -->
+       </div>
+      </div>
+
+     </div>
+   </div>
+   <footer>
+     <% include ../partials/footer %>
+   </footer>
+  </body>
+</html>

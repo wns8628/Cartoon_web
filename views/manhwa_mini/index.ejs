@@ -1,0 +1,36 @@
+<!-- views/posts/index.ejs -->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <% include ../partials/head %>
+ </head>
+ <body class="body" onload ="main_ajax_nowload()">
+  <% include ../partials/nav %>
+
+   <div class="row container mx-auto mid_fix_body">
+
+     <div class="col-sm-12 sb_parent">
+       <div class="showBody manhwalist_index">
+     <% if(isAuthenticated){ %>
+         <%=lists.length%>
+    <% } %>
+         <% if(lists[0]){ %>
+           <h2><%=lists[0].listname%></h2>
+         <% } %>
+        <% lists.forEach(function(list) { %>
+          <% if(list.contentlength == 0){ %>
+            <li><a href="<%=list.url %>"><%=list.name %></a></li>
+            <% } else { %>
+              <li><a href="/toon/<%=list.listname %>/<%= list.index %>"><%=list.name %></a></li>
+            <% } %>
+        <% }) %>
+
+       </div>
+     </div>
+   </div>
+   <footer>
+     <% include ../partials/footer %>
+   </footer>
+ </body>
+</html>

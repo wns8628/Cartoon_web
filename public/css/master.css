@@ -1,0 +1,971 @@
+/* public/css/master.css */
+
+/* 한글폰트위해 */
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+.best_title{
+  font-weight: bold;
+  padding-left: 7px;
+}
+.bestdiv{
+  padding: 0px;
+  margin-bottom: 10px;
+}
+.best_table{
+  background-color: white;
+}
+.best_table a{
+  font-size: 12px;
+  font-weight: bold;
+  color : black;
+  height: 100%;
+}
+.best_table td{
+  width: 130px;
+  height: 40px;
+  border: 1px solid lightgray;
+}
+.best_table img{
+  margin-top: 5px;
+  margin-left: 5px;
+  float: left;
+  width: 35px;
+  height: 35px;
+}
+
+.category_Container{
+  padding: 0px;
+}
+.dropdown_Post_nav {
+  padding-right: 0px;
+}
+.categorynav{
+  background-color: rgb(81,81,81);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.nav-item_category{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-right: 1px solid black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.nav-item_category:hover{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-right: 1px solid black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: rgb(101,101,101);
+
+}
+.nav-item{
+  padding: 0px;
+}
+
+/* 걍만화여기해 */
+.newupdate{
+  background-color: lightblue;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+.upmain_body {
+  margin-top: 10px;
+  border: 1px solid lightblue;
+  background-color: white;
+  padding: 0px;
+  padding-right: 0px;
+}
+.upmangabody{
+  padding: 0px;
+  margin: 0px;
+}
+.search_mangabody{
+  margin-bottom: 3px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 3px;
+  background-color: white;
+  padding: 0px;
+}
+.suv{
+  font-size: 17px;
+  font-weight: bold;
+}
+.mangabody{
+  margin: 0px;
+  padding: 0px;
+}
+#showmenu{
+  font-size: 20px;
+  color: gray;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#showmenu2{
+  font-size: 20px;
+  color: gray;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.barbody{
+  padding-left: 5px;
+  padding-right:5px;
+}
+.barboder{
+  border-bottom: 1px solid gray;
+  padding: 0px;
+}
+.mainupdatemanga{
+  /* height: 25px; */
+}
+.ongoingmanga1{
+  background-color: rgba(80,202,247,1);
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top:  5px;
+  padding-bottom: 5px;
+  margin-bottom : 10px;
+  user-select: none;
+}
+.ongoingmanga2{
+  background-color: #A2E9ff;
+  color: white;
+  font-weight: bold;
+  padding-top:  5px;
+  padding-bottom: 5px;
+  margin-bottom : 10px;
+  user-select: none;
+
+}
+.ongoingmanga2:hover{
+  background-color: #A2E9ff;
+  color: white;
+  font-weight: bold;
+  padding-top:  5px;
+  padding-bottom: 5px;
+  margin-bottom : 10px;
+  top: 1px;
+  left: 1px;
+  border-left: 1px solid #A2E9ff;
+  user-select: none;
+}
+
+.manhwalist_each{
+    /* border: 1px solid black; */
+    padding-bottom: 25px;
+
+}
+.manhwalist_name{
+  color : black;
+  font-weight:600;
+  font-size: 14px;
+}
+.manhwalist_name:hover{
+  color : black;
+  font-weight:600;
+  font-size: 14px;
+}
+
+/* user 바디높이체크 */
+.user_body{
+  min-height: 800px;
+}
+/* 에러메세지 */
+.help-block{
+  color: tomato;
+}
+
+form label{
+ padding: 3px;
+ margin-bottom: 0;
+ font-weight: 300;
+}
+form .form-control{
+ padding: 3px 7px;
+ font-size: inherit;
+ line-height: 20px;
+ height: auto;
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ width: 100%;
+}
+form fieldset{
+ margin: 7px 0 1px;
+ padding: 0px 15px;
+}
+form .form-group{
+ margin: 0;
+ padding-bottom: 6px;
+}
+.ellipsis{
+  display: block;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+}
+table {
+  table-layout:fixed;
+}
+.ellipsisComment{
+  /* width: 10; */
+}
+.form-horizontal .control-label {
+ padding-top: 5px;
+ text-align: left;
+}
+.buttons {
+ margin: 7px 0;
+ padding: 0 5px;
+}
+.buttons form{
+ display: inline-block;
+}
+.buttons .btn-default{
+ min-width: 55px;
+ color: #165751;
+ border: 1px solid #ccc;
+ border-right: 1px solid #aaa;
+ border-bottom: 1px solid #aaa;
+ border-radius: 4px;
+ padding: 5px 10px;
+ background-color: #f5f5f5;
+ font-size: 0.8em;
+ font-weight: bold;
+}
+.buttons .btn-default:hover{
+ text-decoration: none;
+ position: relative;
+ top: 1px;
+ left: 1px;
+ border: 1px solid #ccc;
+ border-top: 1px solid #aaa;
+ border-left: 1px solid #aaa;
+}
+.contentBox{
+ border-top: 1px solid #ccc;
+ border-bottom: 1px solid #ccc;
+ min-height: 560px;
+}
+.contentBoxUser{
+ border-top: 1px solid #ccc;
+ border-bottom: 1px solid #ccc;
+ min-height: 213px;
+ margin-bottom: 10px;
+}
+.contentBoxTop {
+ font-size: 14px;
+ font-weight: 600;
+ margin: 0;
+ margin-bottom: 3px;
+ border-bottom: 1px solid #ccc;
+ background-color: #F5F5F5;
+ padding: 6px 15px;
+ word-wrap: break-word;
+}
+
+/* home style */
+.home h1{
+ /* color: white; */
+}
+
+.home-login{ /* 1 */
+ max-width: 330px;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 14px;
+}
+.login-form{
+  background-color: white;
+  margin-top: 30px;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.main_login{
+  float: right;
+}
+
+/* post style */
+.post {
+ /* max-width: 1000px; */
+ font-family: 'Open Sans', sans-serif;
+ font-size: 12px;
+}
+.show_header{
+ color: gray;
+ text-align: left;
+ /* margin-top: 70px; */
+ margin-bottom: 9px;
+ padding-top: 0px;
+ padding-bottom: 10px;
+ border-bottom: 1px solid lightgray;
+}
+.postshowname{
+  color: gray;
+  text-align: left;
+  margin-top: 70px;
+  margin-bottom: 9px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.post .post-body {
+ white-space: pre-line;
+ padding: 6px 15px 20px;
+}
+.post-index .posts{
+ border-top: 1px solid #ccc;
+ border-bottom: 1px solid #ccc;
+ table-layout: fixed;
+}
+.post .posts th,
+.post .posts td
+{
+ padding: 7px 5px;
+}
+.post .posts th:first-child,
+.post .posts td:first-child
+{
+ padding-left: 15px;
+}
+.post .posts thead{
+ background-color: #F5F5F5;
+}
+.post .posts thead tr th{
+ border-bottom: 1px solid #ccc;
+}
+.post .posts tbody tr:nth-child(odd){
+ background-color: rgb(251,251,251);
+}
+.post .posts tbody .noData{
+ background-color: #FFFFFF;
+ text-align: center;
+}
+.post .posts .num{
+  text-align: center;
+  width: 60px;
+}
+.post .posts .view{
+  text-align: center;
+  width: 80px;
+}
+.post .posts .author{
+  text-align: center;
+  width: 90px;
+}
+.post .posts .date{
+ text-align: center;
+ width: 100px;
+ /* padding-right: 15px; */
+}
+.adate{
+   width: 100px;
+   font-size: 13px;
+   text-align: center;
+}
+
+/* user style */
+.user {
+ font-family: 'Open Sans', sans-serif;
+ font-size: 12px;
+}
+.user-index ul{
+ margin: 0;
+ padding: 3px 12px;
+}
+.user-index ul:after {
+ content: "";
+ display: block;
+ clear: both;
+}
+.user-index ul li{
+ display: inline-block;
+ list-style-type: none;
+ float:left;
+}
+.user-index ul li a{
+ display: inline-block;
+ text-decoration:none;
+ margin: 3px;
+ background-color: #646978;
+ color: white;
+ padding: 3px 10px;
+ border-radius: 3px;
+}
+.user-index ul li a:hover{
+ background-color: #323746;
+ color: lightblue;
+}
+.user-edit hr{
+ margin-top: 5px;
+ margin-bottom: 11px;
+}
+
+.comments{
+  color: tomato;
+}
+.title{
+  color:black;
+}
+/* 댓글 */
+/* 1. 이부분은 float의 parent를 위한 부분입니다. 이렇게 설정해 놓으면 float이 parent밖으로 안튀어나오게 됩니다. CSS 꿀팁이죠. */
+
+.table-sm{
+font-size: 13px;
+}
+/* 커스텀마이징  네브부터  */
+#brick{
+  height: 80px;
+  background-color: rgba(80,202,247,1);
+}
+
+#nav{
+  background-color: rgba(80,202,247,1);
+  /* width:1150px; */
+  padding-left: 3px;
+  padding-right: 0px;
+  padding-top: 25px;
+  padding-bottom: 13px;
+}
+.navbar-brand{
+  font-weight: bold;
+}
+.myNavbar{
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.myNavbar2{
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.dropdown_Post_nav{
+  padding-right: 20px;
+}
+
+.img-cover{
+   position:relative;
+   /* top: 80px; */
+   height: 187px;
+   width: 100%;
+   background-color: black;
+   z-index:1;
+   left: 0px;
+   right: 0px;
+}
+.content{
+     /* text-align: center; */
+     /* padding-top: 50px; */
+     background-color: lightgray;
+     color: white;
+     /* height: 200px; */
+}
+.main_font{
+   font-family: 'Nanum Brush Script', cursive;
+   font-size: 60px;
+}
+.main_sub_font{
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 20px;
+}
+#searchError{
+  color: tomato;
+  font-size: 11px;
+}
+#searchError1{
+  color: tomato;
+  font-size: 11px;
+}
+
+.body{
+  min-height: 500px;
+  background-color :rgb(240, 243, 249);
+}
+.main_body{
+  background-color: white;
+  padding: 5px;
+}
+.mangabodymainbody{
+  background-color: white;
+  padding: 0px;
+}
+.mid_fix_body{
+  padding: 0px;
+}
+
+#main_post_title h4{
+  /* margin-top: 27px; */
+}
+#more_color{
+  color:black;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+}
+#main_right{
+  height: 327px;
+  border: 2px solid gray;
+  background-color: lightgray;
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.link_img_div a{
+  color: darkgray;
+}
+.link_img_div{
+  padding-top: 30px;
+  color: lightgray;
+  text-align: center;
+}
+
+.link_img{
+  width: 80px;
+}
+
+.youtube{
+   /* height:px; */
+   padding: 0px;
+   margin-top: 63px;
+   margin-bottom: 56px;
+   padding-top: 26px;
+   padding-bottom: 25px;
+   border-top: lightgray solid 1px;
+   border-bottom: lightgray solid 1px;
+}
+
+/* 어바웃 */
+#paper{
+  width:100%;
+  text-align: right;
+}
+#paper h2{
+  color: #9E9E9E;
+  margin-top: 0px;
+  padding-top: 45px;
+  padding-right: 35px;
+}
+#paper h3{
+  color: #9E9E9E;
+  margin-top: 0px;
+  padding-top: 45px;
+  padding-right: 35px;
+}
+.about_col{
+ /* background-color: rgb(240, 243, 249); */
+ background-color: white;
+ min-height: 837px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ padding: 0px;
+ border: 1px solid lightgray;
+}
+.about_aticle_body{
+   padding-top: 100px;
+   padding-left: 30px;
+}
+
+/* 게시판 네브 */
+#list-tab{
+ text-align: right;
+ font-size: 14px;
+}
+/* 페이지네이션 */
+#Pagenavigation{
+  /* width: 50%;
+  margin: 0 auto; */
+}
+.pagination{
+  /* width: 50%;
+  margin: 0 auto; */
+}
+
+.Writing{
+  font-size: 13px;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sub_Writing {
+ padding-left: 0px;
+}
+.sub_Writing .btn-default{
+  min-width: 55px;
+  color: #165751;
+  border: 1px solid #ccc;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.sub_Writing:hover .btn-default{
+ text-decoration: none;
+ position: relative;
+ top: 1px;
+ left: 1px;
+ border: 1px solid #ccc;
+ border-top: 1px solid #aaa;
+ border-left: 1px solid #aaa;
+}
+.search_set{
+  margin: 0px;
+}
+.search_select{
+  margin-right: 7px;
+  font-size: 12px;
+  padding-right: 0px;
+  padding-left: 6px;
+  width: 90px;
+}
+#searchform{
+    width: 105px;
+}
+#mangasearchform{
+  width: 150px;
+  font-size: 13px;
+}
+#mangasearchform2{
+  width: 150px;
+  font-size: 13px;
+}
+.mangasearch{
+  padding-top: 6px;
+  padding-right: 10px;
+}
+
+/* show */
+.ac_parent{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.sb_parent{
+  padding-left:  5px;
+  padding-right: 5px;
+}
+.showBody{
+  background-color: white;
+  border: lightgray solid 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 13px;
+  padding-left:  13px;
+  padding-bottom: 5px;
+  min-height: 837px;
+}
+.show_Writinginformation{
+  text-align: right;
+}
+.show_Writinginformation_author{
+  padding-left: 30px;
+}
+.show_edit_and_delete_button{
+  height: 27px;
+}
+.show_edit_and_delete{
+  float: right;
+}
+.right_button_set{
+    float: right;
+}
+.write_btn{
+  height: 27px;
+}
+#show_edit_and_delete{
+  margin-right: 5px;
+}
+/* show 댓글 */
+.commentName{
+  padding-top: 5px;
+}
+.comment{
+  background-color: rgb(244,244,244);
+  margin: 0px;
+  margin-bottom: 8px;
+  padding: 0px;
+}
+.commented{
+  background-color: rgb(244,244,244);
+  min-height: 50px;
+  border-bottom: 1px Dotted lightgray;
+  padding-bottom: 10px;
+  word-wrap: break-word;
+}
+.addComment{
+  margin-left: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  /* padding-top: 15px; */
+  /* padding-bottom: 20px; */
+}
+.addCommentArea{
+  min-height: 70px;
+}
+
+/* 에디트 */
+.fieldset{
+  padding: 0px;
+}
+.editset{
+  padding: 0px;
+}
+/* user */
+.usershowtitle{
+  background-color: rgba(80,202,247,1);
+  font-size: 15px;
+  font-weight: bold;
+  color : white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid lightgray;
+}
+.usershowbody{
+  border: 1px solid lightgray;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+}
+/* 유저수정 */
+#usernameHide{
+  display: none;
+}
+
+/* 푸터 */
+.footer{
+  border-top: 1px solid lightgray;
+  background-color: rgb(240, 243, 249);
+  padding-top: 50px;
+  height: 250px;
+  text-align: center;
+  color: lightsteelblue;
+  font-size: 13px;
+}
+.footer_badge{
+  font-size: 12px;
+}
+
+
+/* 만화 */
+.manhwalist_index{
+  text-align: center;
+  list-style: none;
+}
+.manhwalist_logo{
+  width: 153px;
+  height: 200px;
+  border: 1px solid black;
+}
+.manhwasearch_logo{
+  width: 175px;
+  height: 200px;
+}
+.manhwalist_show_img{
+  max-width: 100%;
+}
+#noupdate{
+  text-align: center;
+}
+
+
+/*  게시판 ? */
+.welcome_post{
+  border-top: lightgray solid 1px;
+  border-bottom: lightgray solid 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 8px;
+  padding-right : 8px;
+  margin: 0px;
+}
+
+
+/* 모바일하기전 안보일것듯 임시*/
+.com_btn_login_m{
+  display: none; /*댓글달떄 모바일에 로그인버튼나오게*/
+}
+
+
+/* 모바일 */
+/* 화면이 576이하로 작아지면 */
+@media ( max-width: 576px ) {
+
+  .bestdiv{
+    padding: 0px;
+  }
+  .best_table{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .best_table td{
+    display: block;
+    float: left;
+    width: 50%;
+    height: 50px;
+  }
+ .navbar_login{
+   display: none;
+ }
+  .nav-item_category{
+    padding-left: 0px;
+    padding-right:0px;
+  }
+  .myNavbar{
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  .myNavbar2{
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+ .nav-item{
+   font-size: 12px;
+ }
+ #mangasearchform{
+   width: 140px;
+   font-size: 13px;
+ }
+ /* 만화이미지 */
+ .manhwalist_show_img{
+   max-width: 100%;
+ }
+ .manhwalist_logo{
+   width: 103px;
+   height: 140px;
+   border: 1px solid black;
+ }
+ .manhwalist_each{
+   width: 103px;
+   padding-bottom: 25px;
+ }
+ .manhwalist_name{
+   color : black;
+   font-weight:600;
+   font-size: 12px;
+ }
+ .manhwalist_name:hover{
+   color : black;
+   font-weight:600;
+   font-size: 12px;
+ }
+ .upmanlayout{
+   padding-left: 2px;
+ }
+
+.manhwasearch_logo{
+  width: 153px;
+  height: 200px;
+}
+  html, body {
+    overflow-x: hidden;
+  }
+  /* 웰컴부분 */
+  .main_body{
+     padding: 0px;
+  }
+  #main_post_title{
+    /* padding-left: 10px; */
+    padding: 0px;
+  }
+  #more_color{
+    padding-left: 0px;
+  }
+  #main_right{
+    margin-left: 3px;
+  }
+  .youtubebody{
+    padding-left: 10px;
+  }
+  /* 게시판인덱스부분 */
+  .num , .view, .date{
+    display: none;
+  }
+  .post .title{
+    font-size: 13px;
+  }
+  .ac_parent{
+    height: 345px;
+  }
+  .showBody{
+    border-top: 5px solid lightgray;
+  }
+  /* Show부분 모바일에서 */
+  .show_Writinginformation_author{
+    text-align: right;
+  }
+  .com_btn{
+    display: none;
+  }
+  .com_btn_m{
+    display: initial;
+    width: 100px;
+    margin: 5px;
+  }
+  .com_btn_login_m{
+    display: initial;
+    width: 100px;
+    margin: 5px;
+  }
+  .addComment {
+    padding: 0px;
+  }
+  .sb_parent{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .showBody{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .mobiletop{
+    background-color:aliceblue;
+    padding-left: 5px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .commentName{
+    background-color:darkgray;
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+  .commented{
+    padding-left: 5px;
+    padding-right: 0px;
+    background-color:white;
+    min-height: 35px;
+  }
+  .comment{
+    margin-bottom: 0px;
+  }
+
+
+  /* 어바웃모바일부분 */
+ .about_aticle_body{
+  padding-left: 0px;
+ }
+
+ /* 만화 모바일 */
+ .progress_menu{
+   display: none;
+ }
+
+}
