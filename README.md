@@ -1,3 +1,5 @@
+http://junijuni.herokuapp.com    (엑박좀있을거임 다지워져서..)
+
 # Cartoon_web
 재미로만드는 만화사이트( Node.js , 디비는 MongoDB사용 )
 
